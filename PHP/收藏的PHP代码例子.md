@@ -36,7 +36,7 @@ ab:3
 dog:3
 cat:2
 monkey:2
-```PHP
+```
 
 # :cyclone:二、随机颜色生成器
 ```PHP
