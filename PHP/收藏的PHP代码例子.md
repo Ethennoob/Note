@@ -250,3 +250,73 @@ if (Visit("http://www.google.com"))
 else
        echo "Website DOWN";
 ```
+# :cyclone:十一、二维数组排序算法
+```PHP
+/**
+ * 二维数组排序算法
+ * @author: 凌翔 <553299576@qq.com>
+ * @DateTime 2016-05-06T20:03:38+0800
+ * @param    [array]                   $arr   [待排序的数组]
+ * @param    [string]                  $field [排序字段]
+ * @param    [string]                  $sort  [正序SORT_ASC,倒顺SORT_DESC]
+ * @return   [array]                          [排序完成数组]
+ */
+function array_sort($arr,$field,$sort){
+    $f = array();
+    foreach ($arr as $v) {
+        $f[] = $v[$field];
+    }
+
+    array_multisort($f, $sort, $arr);
+    return $arr;
+}
+```
+# :cyclone:十二、递归树算法树
+```PHP
+/**
+ * 递归数算法
+ * @param array $items 传入一维数组
+ * @param string $id_name id名称
+ * @param string $pid_name 父级id名称
+ * @param string $children_name 子级名称
+ * @return array
+ */
+function generate_tree($items,$id_name='id',$pid_name='parent_id',$children_name='children'){
+	$items_new = array();
+	foreach ($items as $item) {
+		$items_new[$item[$id_name]] = $item ;
+	}
+	$items = $items_new ;unset($items_new);
+	$tree = array();
+	foreach($items as $item){
+		if(isset($items[$item[$pid_name]])){
+			$items[$item[$pid_name]][$children_name][] = &$items[$item[$id_name]];
+		}else{
+			$tree[] = &$items[$item[$id_name]];
+		}
+	}
+	return $tree;
+}
+```
+# :cyclone:十三 、生成唯一字符串
+```PHP
+function createSn() {
+	$code = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+	$rand = $code[rand(0,25)]
+	.strtoupper(dechex(date('m')))
+	.date('d').substr(time(),-5)
+	.substr(microtime(),2,5)
+	.sprintf('%02d',rand(0,99));
+	for(
+			$a = md5( $rand, true ),
+			$s = '0123456789ABCDEFGHIJKLMNOPQRSTUV',
+			$d = '',
+			$f = 0;
+	$f < 8;
+	$g = ord( $a[ $f ] ),
+	$d .= $s[ ( $g ^ ord( $a[ $f + 8 ] ) ) - $g & 0x1F ],
+	$f++
+	);
+	return $d;
+}
+```
