@@ -320,3 +320,8 @@ function createSn() {
 	return $d;
 }
 ```
+# :cyclone:十四 、mysql排名查询
+#### 根据totle_point查询此用户排名
+```PHP
+$sql='SELECT rank.pm FROM (SELECT @rownum:=@rownum+1 pm,'.$this->table.'.* FROM (SELECT @rownum:=0) a, '.$this->table.' ORDER BY `totle_point` desc) rank WHERE rank.user_id = ?';
+```
