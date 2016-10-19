@@ -1,6 +1,10 @@
 # :ledger:工作和学习笔记:pig:
 >Linux
->>:white_check_mark:[centos6.5搭建一个git服务器](https://github.com/Ethennoob/Note/blob/master/Linux/centos6.5%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAgit%E6%9C%8D%E5%8A%A1%E5%99%A8.md)
+>>:white_check_mark:[centos6.5搭建一个git服务器](https://github.com/Ethennoob/Note/blob/master/Linux/centos6.5%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAgit%E6%9C%8D%E5%8A%A1%E5%99%A8.md)   
+>>:white_check_mark:[crontab定时任务]
+(https://github.com/Ethennoob/Note/blob/master/Linux/crontab%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1.md)  
+>>:white_check_mark:[常用命令]
+(https://github.com/Ethennoob/Note/blob/master/Linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.md) 
 
 #
 >PHP
